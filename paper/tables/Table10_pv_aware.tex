@@ -1,0 +1,25 @@
+\begin{table}[!htbp]
+\centering
+\caption{PV-aware control with an energy-neutral clear-sky PV array (means over July--December 2019; all policies billed on grid import).}
+\label{tab:pv}
+\footnotesize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrrr@{}}
+\hline
+Site & Policy & \makecell[c]{Bill\\(USD)} & \makecell[c]{Import\\peak (kW)} & \makecell[c]{Served\\(\%)} & \makecell[c]{EVs\\full (\%)} & \makecell[c]{PV self-\\suff. (\%)} & \makecell[c]{Penalised\\(USD)} \\
+\hline
+JPL & Uncontrolled & 5,190 & 281.9\,{\scriptsize(264--297)} & 100.0 & 100.0 & 46.7 & 5,190 \\
+JPL & Top-up, PV-unaware & 2,777 & 127.6\,{\scriptsize(121--135)} & 99.9 & 99.5 & 50.7 & 2,876 \\
+JPL & PV-aware top-up & 1,878 & 73.3\,{\scriptsize(57--94)} & 99.2 & 97.3 & 58.0 & 2,692 \\
+JPL & PV-aware, $q$=0.7 & 1,447 & 46.2\,{\scriptsize(34--57)} & 97.0 & 91.2 & 64.4 & 4,626 \\
+JPL & PV-aware opt. & 1,311 & 43.3\,{\scriptsize(38--47)} & 100.0 & 99.9 & 66.5 & 1,323 \\
+\hline
+Caltech & Uncontrolled & 1,487 & 79.3\,{\scriptsize(65--91)} & 100.0 & 100.0 & 56.1 & 1,487 \\
+Caltech & Top-up, PV-unaware & 642 & 25.0\,{\scriptsize(19--31)} & 99.2 & 97.1 & 60.5 & 922 \\
+Caltech & PV-aware top-up & 666 & 26.2\,{\scriptsize(21--35)} & 99.3 & 96.8 & 60.2 & 921 \\
+Caltech & PV-aware, $q$=0.7 & 492 & 16.3\,{\scriptsize(15--21)} & 97.4 & 91.9 & 63.6 & 1,401 \\
+Caltech & PV-aware opt. & 401 & 15.5\,{\scriptsize(12--21)} & 100.0 & 99.9 & 72.7 & 407 \\
+\hline
+\end{tabular*}
+\par\smallskip\parbox{\textwidth}{\scriptsize Monthly range of the import peak below the mean. PV self-sufficiency is the share of delivered EV energy supplied by PV. Surplus PV is curtailed without export credit.}
+\end{table}

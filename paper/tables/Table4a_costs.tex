@@ -1,0 +1,37 @@
+\begin{table}[!htbp]
+\centering
+\caption{Monthly electricity cost by policy (July--December 2019).}
+\label{tab:main}
+\footnotesize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrr@{}}
+\hline
+Site & Policy & \makecell[c]{Bill\\(USD)} & \makecell[c]{Energy\\(USD)} & \makecell[c]{Demand\\(USD)} & \makecell[c]{Gap to\\opt. (\%)} & \makecell[c]{Penalised\\(USD)} \\
+\hline
+JPL & Uncontrolled & 6,693\,{\scriptsize(6,085--7,500)} & 2,103 & 4,589 & +74.0 & 6,693 \\
+JPL & EDF & 5,171\,{\scriptsize(4,532--5,755)} & 2,146 & 3,024 & +33.7 & 5,289 \\
+JPL & LLF & 5,147\,{\scriptsize(4,530--5,705)} & 2,123 & 3,024 & +33.2 & 5,156 \\
+JPL & Nominal MPC & 4,234\,{\scriptsize(3,542--4,938)} & 2,066 & 2,168 & +8.9 & 8,468 \\
+JPL & Robust MPC, $q$=0.5 & 3,079\,{\scriptsize(2,487--3,653)} & 1,763 & 1,317 & -21.1 & 27,951 \\
+JPL & Robust MPC, $q$=0.7 & 3,705\,{\scriptsize(3,119--4,268)} & 1,975 & 1,730 & -4.7 & 15,625 \\
+JPL & Robust MPC, $q$=0.9 & 4,586\,{\scriptsize(4,012--5,176)} & 2,052 & 2,534 & +18.6 & 8,531 \\
+JPL & MPC + top-up & 4,376\,{\scriptsize(3,609--5,150)} & 2,208 & 2,168 & +12.4 & 4,610 \\
+JPL & MPC + top-up, $q$=0.7 & 4,085\,{\scriptsize(3,290--4,876)} & 2,354 & 1,730 & +4.3 & 5,762 \\
+JPL & MPC + top-up, $q$=0.9 & 4,681\,{\scriptsize(4,079--5,325)} & 2,157 & 2,524 & +20.9 & 4,754 \\
+JPL & Hindsight opt. & 3,913\,{\scriptsize(3,086--4,682)} & 2,212 & 1,701 & +0.0 & 3,913 \\
+\hline
+Caltech & Uncontrolled & 2,355\,{\scriptsize(1,949--2,697)} & 729 & 1,627 & +86.3 & 2,355 \\
+Caltech & EDF & 2,355\,{\scriptsize(1,949--2,697)} & 729 & 1,627 & +86.3 & 2,355 \\
+Caltech & LLF & 2,355\,{\scriptsize(1,949--2,697)} & 729 & 1,627 & +86.3 & 2,355 \\
+Caltech & Nominal MPC & 1,537\,{\scriptsize(1,092--1,795)} & 731 & 806 & +19.5 & 2,849 \\
+Caltech & Robust MPC, $q$=0.5 & 1,000\,{\scriptsize(678--1,193)} & 550 & 450 & -22.6 & 10,883 \\
+Caltech & Robust MPC, $q$=0.7 & 1,315\,{\scriptsize(954--1,628)} & 678 & 637 & +2.1 & 5,595 \\
+Caltech & Robust MPC, $q$=0.9 & 1,515\,{\scriptsize(1,041--1,849)} & 716 & 799 & +17.3 & 3,731 \\
+Caltech & MPC + top-up & 1,576\,{\scriptsize(1,102--1,869)} & 770 & 806 & +22.3 & 1,837 \\
+Caltech & MPC + top-up, $q$=0.7 & 1,423\,{\scriptsize(989--1,814)} & 786 & 637 & +10.0 & 2,436 \\
+Caltech & MPC + top-up, $q$=0.9 & 1,556\,{\scriptsize(1,063--1,895)} & 763 & 793 & +20.4 & 1,962 \\
+Caltech & Hindsight opt. & 1,291\,{\scriptsize(895--1,607)} & 750 & 541 & +0.0 & 1,291 \\
+\hline
+\end{tabular*}
+\par\smallskip\parbox{\textwidth}{\scriptsize Six-month means; the range of monthly values is shown in parentheses. Gap is the mean monthly bill gap to the hindsight optimum; Penalised adds 5\,USD per undelivered kWh.}
+\end{table}

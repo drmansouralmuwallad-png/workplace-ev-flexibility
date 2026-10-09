@@ -1,0 +1,44 @@
+\begin{table}[!htbp]
+\centering
+\caption{Sensitivity analysis (means over August and November 2019).}
+\label{tab:sens}
+\footnotesize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllrrr@{}}
+\hline
+Scenario & Site & Policy & \makecell[c]{Bill\\(USD)} & \makecell[c]{Peak\\(kW)} & \makecell[c]{Served\\(\%)} \\
+\hline
+Demand charge $\times$0 & JPL & Nominal MPC & 1,964\,{\scriptsize(1,439--2,490)} & 195.0 & 96.28 \\
+Demand charge $\times$0 & JPL & Robust MPC, $q$=0.9 & 1,993\,{\scriptsize(1,440--2,547)} & 195.0 & 96.26 \\
+Demand charge $\times$0 & JPL & Hindsight opt. & 2,023\,{\scriptsize(1,495--2,551)} & 195.0 & 100.00 \\
+Demand charge $\times$0 & Caltech & Nominal MPC & 726\,{\scriptsize(513--938)} & 115.9 & 97.21 \\
+Demand charge $\times$0 & Caltech & Robust MPC, $q$=0.9 & 723\,{\scriptsize(503--944)} & 115.9 & 95.38 \\
+Demand charge $\times$0 & Caltech & Hindsight opt. & 708\,{\scriptsize(523--892)} & 115.9 & 100.00 \\
+\hline
+Demand charge $\times$2 & JPL & Nominal MPC & 6,275\,{\scriptsize(5,626--6,925)} & 135.9 & 96.10 \\
+Demand charge $\times$2 & JPL & Robust MPC, $q$=0.9 & 5,270\,{\scriptsize(4,468--6,072)} & 99.0 & 91.17 \\
+Demand charge $\times$2 & JPL & Hindsight opt. & 5,408\,{\scriptsize(4,613--6,204)} & 97.5 & 100.00 \\
+Demand charge $\times$2 & Caltech & Nominal MPC & 2,226\,{\scriptsize(2,081--2,370)} & 46.5 & 95.19 \\
+Demand charge $\times$2 & Caltech & Robust MPC, $q$=0.9 & 1,307\,{\scriptsize(1,176--1,439)} & 22.2 & 74.20 \\
+Demand charge $\times$2 & Caltech & Hindsight opt. & 1,933\,{\scriptsize(1,785--2,082)} & 37.2 & 100.00 \\
+\hline
+Penalty 20\,USD/kWh & JPL & Nominal MPC & 4,148\,{\scriptsize(3,506--4,791)} & 134.8 & 96.06 \\
+Penalty 20\,USD/kWh & JPL & Robust MPC, $q$=0.9 & 4,493\,{\scriptsize(4,013--4,974)} & 158.5 & 96.24 \\
+Penalty 20\,USD/kWh & JPL & Hindsight opt. & 3,870\,{\scriptsize(3,086--4,655)} & 108.0 & 100.00 \\
+Penalty 20\,USD/kWh & Caltech & Nominal MPC & 1,593\,{\scriptsize(1,387--1,798)} & 53.5 & 96.55 \\
+Penalty 20\,USD/kWh & Caltech & Robust MPC, $q$=0.9 & 1,667\,{\scriptsize(1,482--1,852)} & 59.6 & 94.88 \\
+Penalty 20\,USD/kWh & Caltech & Hindsight opt. & 1,356\,{\scriptsize(1,158--1,554)} & 37.2 & 100.00 \\
+\hline
+30-day window & JPL & Nominal MPC & 4,168\,{\scriptsize(3,542--4,793)} & 135.9 & 96.09 \\
+30-day window & JPL & Robust MPC, $q$=0.9 & 4,485\,{\scriptsize(3,992--4,977)} & 158.4 & 96.06 \\
+30-day window & Caltech & Nominal MPC & 1,582\,{\scriptsize(1,366--1,798)} & 52.8 & 96.45 \\
+30-day window & Caltech & Robust MPC, $q$=0.9 & 1,557\,{\scriptsize(1,285--1,829)} & 52.2 & 94.18 \\
+\hline
+90-day window & JPL & Nominal MPC & 4,167\,{\scriptsize(3,542--4,792)} & 135.9 & 96.09 \\
+90-day window & JPL & Robust MPC, $q$=0.9 & 4,503\,{\scriptsize(4,032--4,975)} & 159.2 & 96.22 \\
+90-day window & Caltech & Nominal MPC & 1,569\,{\scriptsize(1,341--1,797)} & 52.0 & 96.41 \\
+90-day window & Caltech & Robust MPC, $q$=0.9 & 1,564\,{\scriptsize(1,285--1,843)} & 52.7 & 94.09 \\
+\hline
+\end{tabular*}
+\par\smallskip\parbox{\textwidth}{\scriptsize The range of the two months is shown in parentheses.}
+\end{table}

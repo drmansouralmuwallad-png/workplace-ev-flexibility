@@ -1,0 +1,29 @@
+\begin{table}[!htbp]
+\centering
+\caption{Grid-flexibility metrics (July--December 2019).}
+\label{tab:flex}
+\footnotesize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrr@{}}
+\hline
+Site & Policy & \makecell[c]{Peak\\red. (\%)} & \makecell[c]{Load\\factor} & PAR & \makecell[c]{Max ramp\\(kW/15 min)} & \makecell[c]{Shifted\\(\%)} \\
+\hline
+JPL & Uncontrolled & 0.0\,{\scriptsize(0.0--0.0)} & 0.099 & 10.2\,{\scriptsize(8.8--10.8)} & 73.1 & 0.0 \\
+JPL & LLF & 34.0\,{\scriptsize(31.3--37.7)} & 0.149 & 6.7\,{\scriptsize(5.9--7.1)} & 59.2 & 4.3 \\
+JPL & Nominal MPC & 52.7\,{\scriptsize(45.6--56.1)} & 0.201 & 5.0\,{\scriptsize(4.0--5.6)} & 50.3 & 17.3 \\
+JPL & Robust MPC, $q$=0.9 & 44.7\,{\scriptsize(40.8--51.5)} & 0.173 & 5.9\,{\scriptsize(4.7--6.5)} & 55.0 & 15.3 \\
+JPL & MPC + top-up & 52.7\,{\scriptsize(45.6--56.1)} & 0.209 & 4.8\,{\scriptsize(3.9--5.4)} & 49.7 & 13.8 \\
+JPL & MPC + top-up, $q$=0.7 & 62.3\,{\scriptsize(59.1--64.9)} & 0.258 & 3.9\,{\scriptsize(3.2--4.2)} & 42.9 & 20.1 \\
+JPL & Hindsight opt. & 62.9\,{\scriptsize(56.2--67.6)} & 0.268 & 3.8\,{\scriptsize(3.0--4.3)} & 98.8 & 21.9 \\
+\hline
+Caltech & Uncontrolled & 0.0\,{\scriptsize(0.0--0.0)} & 0.091 & 11.2\,{\scriptsize(9.8--13.5)} & 34.3 & 0.0 \\
+Caltech & LLF & 0.0\,{\scriptsize(0.0--0.0)} & 0.091 & 11.2\,{\scriptsize(9.8--13.5)} & 34.3 & 0.0 \\
+Caltech & Nominal MPC & 49.9\,{\scriptsize(35.4--55.3)} & 0.176 & 5.8\,{\scriptsize(5.0--6.7)} & 27.4 & 13.7 \\
+Caltech & Robust MPC, $q$=0.9 & 50.5\,{\scriptsize(42.0--58.0)} & 0.172 & 5.8\,{\scriptsize(5.3--6.3)} & 28.2 & 18.9 \\
+Caltech & MPC + top-up & 49.9\,{\scriptsize(35.4--55.3)} & 0.181 & 5.6\,{\scriptsize(4.8--6.5)} & 27.2 & 9.3 \\
+Caltech & MPC + top-up, $q$=0.7 & 60.6\,{\scriptsize(54.3--65.8)} & 0.224 & 4.5\,{\scriptsize(3.7--5.3)} & 23.4 & 15.8 \\
+Caltech & Hindsight opt. & 66.7\,{\scriptsize(61.9--69.2)} & 0.272 & 3.7\,{\scriptsize(3.2--4.2)} & 34.9 & 22.1 \\
+\hline
+\end{tabular*}
+\par\smallskip\parbox{\textwidth}{\scriptsize Means with monthly ranges in parentheses. Peak reduction and shifted energy are relative to uncontrolled charging; PAR is the peak-to-average ratio of the monthly load.}
+\end{table}

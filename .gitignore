@@ -1,0 +1,25 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# rebuilt by prepare_data.py
+data/raw/
+data/processed/
+
+# run logs
+results/*.out
+results/run_log.txt
+
+# LaTeX build files
+paper/*.aux
+paper/*.log
+paper/*.blg
+paper/*.bbl
+paper/*.out
+paper/*.spl
+paper/*.synctex.gz
+paper/main.pdf

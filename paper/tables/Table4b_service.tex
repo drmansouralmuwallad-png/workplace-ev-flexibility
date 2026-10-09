@@ -1,0 +1,37 @@
+\begin{table}[!htbp]
+\centering
+\caption{Monthly peak demand and charging service by policy (July--December 2019).}
+\label{tab:service}
+\footnotesize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrr@{}}
+\hline
+Site & Policy & \makecell[c]{Peak\\(kW)} & \makecell[c]{Energy served\\(\%)} & \makecell[c]{EVs fully\\served (\%)} \\
+\hline
+JPL & Uncontrolled & 296\,{\scriptsize(284--313)} & 100.0\,{\scriptsize(100.0--100.0)} & 100.0\,{\scriptsize(100.0--100.0)} \\
+JPL & EDF & 195\,{\scriptsize(195--195)} & 99.9\,{\scriptsize(99.9--99.9)} & 99.5\,{\scriptsize(99.3--99.7)} \\
+JPL & LLF & 195\,{\scriptsize(195--195)} & 100.0\,{\scriptsize(100.0--100.0)} & 99.9\,{\scriptsize(99.8--100.0)} \\
+JPL & Nominal MPC & 140\,{\scriptsize(128--154)} & 96.0\,{\scriptsize(94.9--97.3)} & 86.6\,{\scriptsize(84.1--89.1)} \\
+JPL & Robust MPC, $q$=0.5 & 85\,{\scriptsize(78--91)} & 76.8\,{\scriptsize(75.3--78.1)} & 40.0\,{\scriptsize(37.7--43.3)} \\
+JPL & Robust MPC, $q$=0.7 & 112\,{\scriptsize(103--116)} & 88.8\,{\scriptsize(87.9--90.6)} & 62.8\,{\scriptsize(60.1--65.2)} \\
+JPL & Robust MPC, $q$=0.9 & 163\,{\scriptsize(151--173)} & 96.3\,{\scriptsize(95.4--97.3)} & 84.7\,{\scriptsize(81.0--87.0)} \\
+JPL & MPC + top-up & 140\,{\scriptsize(128--154)} & 99.8\,{\scriptsize(99.7--99.9)} & 98.9\,{\scriptsize(98.5--99.7)} \\
+JPL & MPC + top-up, $q$=0.7 & 112\,{\scriptsize(103--116)} & 98.4\,{\scriptsize(98.0--99.0)} & 94.0\,{\scriptsize(92.9--96.1)} \\
+JPL & MPC + top-up, $q$=0.9 & 163\,{\scriptsize(150--173)} & 99.9\,{\scriptsize(99.8--100.0)} & 99.6\,{\scriptsize(99.1--99.9)} \\
+JPL & Hindsight opt. & 110\,{\scriptsize(98--124)} & 100.0\,{\scriptsize(100.0--100.0)} & 100.0\,{\scriptsize(100.0--100.0)} \\
+\hline
+Caltech & Uncontrolled & 105\,{\scriptsize(89--121)} & 100.0\,{\scriptsize(100.0--100.0)} & 100.0\,{\scriptsize(100.0--100.0)} \\
+Caltech & EDF & 105\,{\scriptsize(89--121)} & 100.0\,{\scriptsize(100.0--100.0)} & 100.0\,{\scriptsize(100.0--100.0)} \\
+Caltech & LLF & 105\,{\scriptsize(89--121)} & 100.0\,{\scriptsize(100.0--100.0)} & 100.0\,{\scriptsize(100.0--100.0)} \\
+Caltech & Nominal MPC & 52\,{\scriptsize(44--57)} & 96.3\,{\scriptsize(94.8--97.2)} & 87.6\,{\scriptsize(84.4--89.7)} \\
+Caltech & Robust MPC, $q$=0.5 & 29\,{\scriptsize(24--33)} & 71.7\,{\scriptsize(69.3--76.0)} & 44.9\,{\scriptsize(40.6--49.6)} \\
+Caltech & Robust MPC, $q$=0.7 & 41\,{\scriptsize(37--46)} & 87.9\,{\scriptsize(85.8--89.5)} & 65.3\,{\scriptsize(63.3--67.9)} \\
+Caltech & Robust MPC, $q$=0.9 & 51\,{\scriptsize(42--55)} & 93.6\,{\scriptsize(91.8--95.5)} & 80.1\,{\scriptsize(77.8--82.2)} \\
+Caltech & MPC + top-up & 52\,{\scriptsize(44--57)} & 99.2\,{\scriptsize(99.0--99.6)} & 96.0\,{\scriptsize(94.5--97.3)} \\
+Caltech & MPC + top-up, $q$=0.7 & 41\,{\scriptsize(37--46)} & 97.1\,{\scriptsize(96.5--97.9)} & 90.5\,{\scriptsize(89.5--92.6)} \\
+Caltech & MPC + top-up, $q$=0.9 & 51\,{\scriptsize(42--55)} & 98.8\,{\scriptsize(97.0--99.4)} & 95.9\,{\scriptsize(91.9--97.5)} \\
+Caltech & Hindsight opt. & 35\,{\scriptsize(30--40)} & 100.0\,{\scriptsize(100.0--100.0)} & 100.0\,{\scriptsize(100.0--100.0)} \\
+\hline
+\end{tabular*}
+\par\smallskip\parbox{\textwidth}{\scriptsize Six-month means with the range of monthly values in parentheses. A vehicle is fully served when its shortfall is at most 0.05\,kWh.}
+\end{table}

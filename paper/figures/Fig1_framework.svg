@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="516.6pt" height="202.896pt" viewBox="0 0 516.6 202.896" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-09T11:39:43.615002</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 202.896 
+L 516.6 202.896 
+L 516.6 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 12.222 93.90816 
+L 97.596 93.90816 
+Q 99.6048 93.90816 99.6048 92.0232 
+L 99.6048 26.0496 
+Q 99.6048 24.16464 97.596 24.16464 
+L 12.222 24.16464 
+Q 10.2132 24.16464 10.2132 26.0496 
+L 10.2132 92.0232 
+Q 10.2132 93.90816 12.222 93.90816 
+z
+" clip-path="url(#p8b1d89f0bd)" style="fill: #f2f2f2; stroke: #4c4c4c; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 117.684 93.90816 
+L 203.058 93.90816 
+Q 205.0668 93.90816 205.0668 92.0232 
+L 205.0668 26.0496 
+Q 205.0668 24.16464 203.058 24.16464 
+L 117.684 24.16464 
+Q 115.6752 24.16464 115.6752 26.0496 
+L 115.6752 92.0232 
+Q 115.6752 93.90816 117.684 93.90816 
+z
+" clip-path="url(#p8b1d89f0bd)" style="fill: #f2f2f2; stroke: #4c4c4c; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 223.146 93.90816 
+L 308.52 93.90816 
+Q 310.5288 93.90816 310.5288 92.0232 
+L 310.5288 26.0496 
+Q 310.5288 24.16464 308.52 24.16464 
+L 223.146 24.16464 
+Q 221.1372 24.16464 221.1372 26.0496 
+L 221.1372 92.0232 
+Q 221.1372 93.90816 223.146 93.90816 
+z
+" clip-path="url(#p8b1d89f0bd)" style="fill: #f2f2f2; stroke: #4c4c4c; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 328.608 93.90816 
+L 413.982 93.90816 
+Q 415.9908 93.90816 415.9908 92.0232 
+L 415.9908 26.0496 
+Q 415.9908 24.16464 413.982 24.16464 
+L 328.608 24.16464 
+Q 326.5992 24.16464 326.5992 26.0496 
+L 326.5992 92.0232 
+Q 326.5992 93.90816 328.608 93.90816 
+z
+" clip-path="url(#p8b1d89f0bd)" style="fill: #f2f2f2; stroke: #4c4c4c; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 223.146 188.15616 
+L 413.982 188.15616 
+Q 415.9908 188.15616 415.9908 186.2712 
+L 415.9908 120.2976 
+Q 415.9908 118.41264 413.982 118.41264 
+L 223.146 118.41264 
+Q 221.1372 118.41264 221.1372 120.2976 
+L 221.1372 186.2712 
+Q 221.1372 188.15616 223.146 188.15616 
+z
+" clip-path="url(#p8b1d89f0bd)" style="fill: #f2f2f2; stroke: #4c4c4c; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 434.07 141.03216 
+L 504.378 141.03216 
+Q 506.3868 141.03216 506.3868 139.1472 
+L 506.3868 73.1736 
+Q 506.3868 71.28864 504.378 71.28864 
+L 434.07 71.28864 
+Q 432.0612 71.28864 432.0612 73.1736 
+L 432.0612 139.1472 
+Q 432.0612 141.03216 434.07 141.03216 
+z
+" clip-path="url(#p8b1d89f0bd)" style="fill: #f2f2f2; stroke: #4c4c4c; stroke-width: 0.8; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(22.943156 48.560283)">ACN-Data sessions</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(21.483281 56.722142)">JPL &amp; Caltech, 2019</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(22.743406 64.884002)">(arrival, departure,</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(23.022844 73.045861)">kWh, declarations)</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(129.858656 48.55922)">Rolling calibration</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(122.799938 56.72108)">60 days before month</text>
+    <!-- errors $\Delta d$, $\rho$ -->
+    <g transform="translate(140.481 64.884002)">
+     <text>
+      <tspan x="0" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">e</tspan>
+      <tspan x="4.181671" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">r</tspan>
+      <tspan x="6.976089" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">r</tspan>
+      <tspan x="9.770508" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">o</tspan>
+      <tspan x="13.928955" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">r</tspan>
+      <tspan x="16.723373" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">s</tspan>
+      <tspan x="20.264526" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'"> </tspan>
+      <tspan x="22.425064" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">Δ</tspan>
+      <tspan x="31.389114" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">,</tspan>
+      <tspan x="33.549652" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'"> </tspan>
+      <tspan x="27.074692" y="-0.84375" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'">d</tspan>
+      <tspan x="35.71019" y="-0.84375" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'">ρ</tspan>
+     </text>
+    </g>
+    <!-- quantiles at level $q$ -->
+    <g transform="translate(127.799 73.046923)">
+     <text>
+      <tspan x="0" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">q</tspan>
+      <tspan x="4.314423" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">u</tspan>
+      <tspan x="8.622208" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">a</tspan>
+      <tspan x="12.787292" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">n</tspan>
+      <tspan x="17.095078" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">t</tspan>
+      <tspan x="19.760071" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">i</tspan>
+      <tspan x="21.648468" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">l</tspan>
+      <tspan x="23.536865" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">e</tspan>
+      <tspan x="27.718536" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">s</tspan>
+      <tspan x="31.259689" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'"> </tspan>
+      <tspan x="33.420227" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">a</tspan>
+      <tspan x="37.585312" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">t</tspan>
+      <tspan x="40.250305" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'"> </tspan>
+      <tspan x="42.410843" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">l</tspan>
+      <tspan x="44.29924" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">e</tspan>
+      <tspan x="48.480911" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">v</tspan>
+      <tspan x="52.503281" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">e</tspan>
+      <tspan x="56.684952" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'">l</tspan>
+      <tspan x="58.573349" y="-0.84375" style="font-size: 6.8px; font-family: 'DejaVu Sans'"> </tspan>
+      <tspan x="60.733887" y="-0.84375" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'">q</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(240.935438 50.397744)">Robust targets</text>
+    <!-- $\tilde d=\hat d+Q_{1-q}(\Delta d)$ -->
+    <g transform="translate(237.307 61.076666)">
+     <text>
+      <tspan x="3.804688" y="-2.03125" style="font-size: 6.8px; font-family: 'DejaVu Sans'">̃</tspan>
+      <tspan x="5.63862" y="-0.36875" style="font-size: 6.8px; font-family: 'DejaVu Sans'">=</tspan>
+      <tspan x="16.431293" y="-2.5625" style="font-size: 6.8px; font-family: 'DejaVu Sans'">̂</tspan>
+      <tspan x="18.296475" y="-0.36875" style="font-size: 6.8px; font-family: 'DejaVu Sans'">+</tspan>
+      <tspan x="42.739101" y="-0.36875" style="font-size: 6.8px; font-family: 'DejaVu Sans'">(</tspan>
+      <tspan x="45.390819" y="-0.36875" style="font-size: 6.8px; font-family: 'DejaVu Sans'">Δ</tspan>
+      <tspan x="54.35487" y="-0.36875" style="font-size: 6.8px; font-family: 'DejaVu Sans'">)</tspan>
+      <tspan x="0" y="-0.36875" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'">d</tspan>
+      <tspan x="12.657855" y="-0.36875" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'">d</tspan>
+      <tspan x="25.31571" y="-0.36875" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'">Q</tspan>
+      <tspan x="50.040447" y="-0.36875" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'">d</tspan>
+      <tspan x="30.665594" y="0.651247" style="font-size: 4.76px; font-family: 'DejaVu Sans'">1</tspan>
+      <tspan x="34.619603" y="0.651247" style="font-size: 4.76px; font-family: 'DejaVu Sans'">−</tspan>
+      <tspan x="39.533068" y="0.651247" style="font-style: oblique; font-size: 4.76px; font-family: 'DejaVu Sans'">q</tspan>
+     </text>
+    </g>
+    <!-- $\tilde e=\hat e\,Q_q(\rho)$ -->
+    <g transform="translate(247.813 70.801994)">
+     <text>
+      <tspan x="3.6875" y="-1.03125" style="font-size: 6.8px; font-family: 'DejaVu Sans'">̃</tspan>
+      <tspan x="5.505869" y="-0.7125" style="font-size: 6.8px; font-family: 'DejaVu Sans'">=</tspan>
+      <tspan x="16.181354" y="-1.5625" style="font-size: 6.8px; font-family: 'DejaVu Sans'">̂</tspan>
+      <tspan x="26.366212" y="-0.7125" style="font-size: 6.8px; font-family: 'DejaVu Sans'">(</tspan>
+      <tspan x="33.332353" y="-0.7125" style="font-size: 6.8px; font-family: 'DejaVu Sans'">)</tspan>
+      <tspan x="0" y="-0.7125" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'">e</tspan>
+      <tspan x="12.525104" y="-0.7125" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'">e</tspan>
+      <tspan x="17.810295" y="-0.7125" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'">Q</tspan>
+      <tspan x="29.01793" y="-0.7125" style="font-style: oblique; font-size: 6.8px; font-family: 'DejaVu Sans'">ρ</tspan>
+      <tspan x="23.160179" y="0.307497" style="font-style: oblique; font-size: 4.76px; font-family: 'DejaVu Sans'">q</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(337.265781 48.560283)">Peak-state MPC (LP)</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(332.343219 56.722142)">energy cost + demand</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(335.927031 64.884002)">charge on increment</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(339.369531 73.045861)">above month peak</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(262.974 146.889212)">Event-driven replay, 5-min steps</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(245.977188 155.051072)">true departure and energy revealed online</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(259.957031 163.212931)">optional top-up below month peak</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(452.513 99.765212)">Bill, peak,</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(443.691062 107.927072)">energy served,</text>
+    <text style="font-size: 6.8px; font-family: 'DejaVu Sans'" transform="translate(449.611844 116.088931)">unmet kWh</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 102.104275 59.0364 
+Q 107.638382 59.0364 112.166259 59.0364 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 108.566259 57.2364 
+L 112.166259 59.0364 
+L 108.566259 60.8364 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 207.566275 59.0364 
+Q 213.100382 59.0364 217.628259 59.0364 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 214.028259 57.2364 
+L 217.628259 59.0364 
+L 214.028259 60.8364 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 313.028275 59.0364 
+Q 318.562382 59.0364 323.090259 59.0364 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 319.490259 57.2364 
+L 323.090259 59.0364 
+L 319.490259 60.8364 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 370.355521 96.142523 
+Q 365.017798 106.159842 360.15326 115.289131 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 363.434735 112.958483 
+L 360.15326 115.289131 
+L 360.257627 111.265562 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 316.739142 117.125991 
+Q 292.197994 106.160174 268.575535 95.604858 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 271.128009 98.716912 
+L 268.575535 95.604858 
+L 272.596663 95.430112 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 417.322439 151.468354 
+Q 424.024502 136.79428 430.308528 123.035491 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 427.175606 125.562306 
+L 430.308528 123.035491 
+L 430.450227 127.057918 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4c4c4c" x="298.476" y="106.1604" transform="rotate(-0 298.476 106.1604)">rates</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #4c4c4c" x="268.344" y="105.21792" transform="rotate(-0 268.344 105.21792)">state</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8b1d89f0bd">
+   <rect x="7.2" y="7.2" width="502.2" height="188.496"/>
+  </clipPath>
+ </defs>
+</svg>

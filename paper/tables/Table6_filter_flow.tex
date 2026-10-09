@@ -1,0 +1,34 @@
+\begin{table}[H]
+\centering
+\caption{Session filtering flow.}
+\label{tab:flow}
+\footnotesize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lp{0.68\textwidth}r@{}}
+\hline
+Site & Step & Sessions \\
+\hline
+JPL & raw & 11,830 \\
+JPL & drop duplicate session ID & 11,830 \\
+JPL & has arrival, departure, kWh & 11,830 \\
+JPL & kWh $\geq$ 0.5 & 11,830 \\
+JPL & 0.25 h $\leq$ duration $\leq$ 48.0 h & 11,823 \\
+JPL & done within [arrival, departure] & 11,823 \\
+JPL & implied avg power $\leq$ 20.0 kW (drops DC fast charging) & 11,823 \\
+JPL & claimed (usable declaration) & 11,442 \\
+JPL & declaration present but invalid $\rightarrow$ treated as unclaimed & 0 \\
+JPL & declaration edited after plug-in (first input used) & 0 \\
+\hline
+Caltech & raw & 6,704 \\
+Caltech & drop duplicate session ID & 6,704 \\
+Caltech & has arrival, departure, kWh & 6,704 \\
+Caltech & kWh $\geq$ 0.5 & 6,704 \\
+Caltech & 0.25 h $\leq$ duration $\leq$ 48.0 h & 6,659 \\
+Caltech & done within [arrival, departure] & 6,659 \\
+Caltech & implied avg power $\leq$ 20.0 kW (drops DC fast charging) & 6,659 \\
+Caltech & claimed (usable declaration) & 5,616 \\
+Caltech & declaration present but invalid $\rightarrow$ treated as unclaimed & 0 \\
+Caltech & declaration edited after plug-in (first input used) & 0 \\
+\hline
+\end{tabular*}
+\end{table}

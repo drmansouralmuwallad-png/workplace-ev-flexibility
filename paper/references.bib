@@ -1,0 +1,573 @@
+% ---------------------------------------------------------------------------
+% Every entry was checked against a publisher page, a DOI registry record, an
+% institutional repository record, or the reference list of a published paper
+% during preparation (see paper/VERIFICATION_LOG.md). Do not add entries that
+% have not been checked the same way.
+% ---------------------------------------------------------------------------
+
+% ===== Data, tools and tariffs ==============================================
+@inproceedings{Lee2019ACNData,
+  author    = {Lee, Zachary J. and Li, Tongxin and Low, Steven H.},
+  title     = {{ACN-Data}: Analysis and Applications of an Open {EV} Charging Dataset},
+  booktitle = {Proceedings of the Tenth ACM International Conference on Future Energy Systems (e-Energy '19)},
+  address   = {Phoenix, AZ, USA},
+  pages     = {139--149},
+  year      = {2019},
+  doi       = {10.1145/3307772.3328313}
+}
+@misc{ACNDataset,
+  author       = {{Caltech Adaptive Charging Network}},
+  title        = {{ACN-Data}: A Public {EV} Charging Dataset [dataset]},
+  howpublished = {\url{https://ev.caltech.edu/dataset}},
+  note         = {Accessed 27 September 2026. Descriptor paper: doi:10.1145/3307772.3328313},
+  year         = {2019}
+}
+@inproceedings{Yeh2023SustainGym,
+  author    = {Yeh, Christopher and Li, Victor and Datta, Rajeev and Arroyo, Julio and Christianson, Nicolas and Zhang, Chi and others},
+  title     = {{SustainGym}: Reinforcement Learning Environments for Sustainable Energy Systems},
+  booktitle = {Advances in Neural Information Processing Systems 36 (NeurIPS 2023), Datasets and Benchmarks Track},
+  year      = {2023},
+  url       = {https://openreview.net/forum?id=vZ9tA3o3hr},
+  note      = {Software v0.1.7 (PyPI) redistributes ACN-Data session extracts under CC-BY-4.0}
+}
+@article{Lee2021ACN,
+  author  = {Lee, Zachary J. and Lee, George and Lee, Ted and Jin, Cheng and Lee, Rand and Low, Zhi and others},
+  title   = {Adaptive Charging Networks: A Framework for Smart Electric Vehicle Charging},
+  journal = {IEEE Transactions on Smart Grid},
+  volume  = {12},
+  number  = {5},
+  pages   = {4339--4350},
+  year    = {2021},
+  doi     = {10.1109/TSG.2021.3074437}
+}
+@article{Lee2021ACNSim,
+  author  = {Lee, Zachary J. and Sharma, Sunash and Johansson, Daniel and Low, Steven H.},
+  title   = {{ACN-Sim}: An Open-Source Simulator for Data-Driven Electric Vehicle Charging Research},
+  journal = {IEEE Transactions on Smart Grid},
+  volume  = {12},
+  number  = {6},
+  pages   = {5113--5123},
+  year    = {2021},
+  doi     = {10.1109/TSG.2021.3103156}
+}
+@article{Lee2021Portal,
+  author  = {Lee, Zachary J. and Sharma, Sunash and Low, Steven H.},
+  title   = {Research Tools for Smart Electric Vehicle Charging: An Introduction to the Adaptive Charging Network Research Portal},
+  journal = {IEEE Electrification Magazine},
+  volume  = {9},
+  number  = {3},
+  year    = {2021},
+  doi     = {10.1109/MELE.2021.3093597}
+}
+@misc{SCETOUEV4,
+  author       = {{Southern California Edison}},
+  title        = {Schedule {TOU-EV-4}: General Service Time-of-Use, Electric Vehicle Charging -- Demand Metered (effective 1 March 2019)},
+  howpublished = {\url{https://www1.sce.com/NR/sc3/tm2/pdf/ce141-12.pdf}},
+  note         = {Rates as encoded in acnportal v0.3.3, file \texttt{sce\_tou\_ev\_4\_march\_2019.json}},
+  year         = {2019}
+}
+@misc{SCETOUGS2,
+  author       = {{Southern California Edison}},
+  title        = {Business Rate Basics: Rate Schedule {TOU-GS-2}},
+  howpublished = {\url{https://www.sce.com/sites/default/files/inline-files/TOU-GS-2%20Rate%20Fact%20Sheet_WCAG.pdf}},
+  note         = {Accessed 27 September 2026},
+  year         = {2018}
+}
+@misc{CPUCEVRates,
+  author       = {{California Public Utilities Commission}},
+  title        = {Electricity Rates and Cost of Fueling},
+  howpublished = {\url{https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/infrastructure/transportation-electrification/electricity-rates-and-cost-of-fueling}},
+  note         = {Accessed 27 September 2026},
+  year         = {2026}
+}
+@article{Virtanen2020SciPy,
+  author  = {Virtanen, Pauli and Gommers, Ralf and Oliphant, Travis E. and Haberland, Matt and Reddy, Tyler and Cournapeau, David and others},
+  title   = {{SciPy} 1.0: Fundamental Algorithms for Scientific Computing in {Python}},
+  journal = {Nature Methods},
+  volume  = {17},
+  number  = {3},
+  pages   = {261--272},
+  year    = {2020},
+  doi     = {10.1038/s41592-019-0686-2}
+}
+@article{Huangfu2018HiGHS,
+  author  = {Huangfu, Q. and Hall, J. A. J.},
+  title   = {Parallelizing the Dual Revised Simplex Method},
+  journal = {Mathematical Programming Computation},
+  volume  = {10},
+  number  = {1},
+  pages   = {119--142},
+  year    = {2018},
+  doi     = {10.1007/s12532-017-0130-5}
+}
+@article{GaeteMorales2021emobpy,
+  author  = {Gaete-Morales, Carlos and Kramer, Hendrik and Schill, Wolf-Peter and Zerrahn, Alexander},
+  title   = {An Open Tool for Creating Battery-Electric Vehicle Time Series from Empirical Data, emobpy},
+  journal = {Scientific Data},
+  volume  = {8},
+  pages   = {152},
+  year    = {2021},
+  doi     = {10.1038/s41597-021-00932-9}
+}
+
+% ===== Demand charges and online scheduling on ACN data ======================
+@article{Lee2020Pricing,
+  author  = {Lee, Zachary J. and Pang, John Z. F. and Low, Steven H.},
+  title   = {Pricing {EV} Charging Service with Demand Charge},
+  journal = {Electric Power Systems Research},
+  volume  = {189},
+  pages   = {106694},
+  year    = {2020},
+  doi     = {10.1016/j.epsr.2020.106694}
+}
+@inproceedings{Nakahira2017sLLF,
+  author    = {Nakahira, Yorie and Chen, Niangjun and Chen, Lijun and Low, Steven H.},
+  title     = {Smoothed Least-Laxity-First Algorithm for {EV} Charging},
+  booktitle = {Proceedings of the Eighth International Conference on Future Energy Systems (e-Energy '17)},
+  pages     = {242--251},
+  year      = {2017},
+  doi       = {10.1145/3077839.3077864}
+}
+@article{Zhao2017RobustOnline,
+  author  = {Zhao, Shizhen and Lin, Xiaojun and Chen, Minghua},
+  title   = {Robust Online Algorithms for Peak-Minimizing {EV} Charging Under Multistage Uncertainty},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {62},
+  number  = {11},
+  pages   = {5739--5754},
+  year    = {2017},
+  doi     = {10.1109/TAC.2017.2699290}
+}
+@misc{Ahmad2023TwoLayer,
+  author        = {Ahmad, S. and Baltussen, J. and Kergus, P. and Kader, Z. and Caux, S.},
+  title         = {A Two-Layers Predictive Algorithm for Workplace {EV} Charging},
+  year          = {2023},
+  eprint        = {2307.08311},
+  archivePrefix = {arXiv},
+  doi           = {10.48550/arXiv.2307.08311},
+  note          = {Preprint}
+}
+
+% ===== EV charging flexibility, grid impact, smart charging =================
+@article{Schuller2015Flex,
+  author  = {Schuller, Alexander and Flath, Christoph M. and Gottwalt, Sebastian},
+  title   = {Quantifying Load Flexibility of Electric Vehicles for Renewable Energy Integration},
+  journal = {Applied Energy},
+  volume  = {151},
+  pages   = {335--344},
+  year    = {2015},
+  doi     = {10.1016/j.apenergy.2015.04.004}
+}
+@article{Muratori2018Uncoordinated,
+  author  = {Muratori, Matteo},
+  title   = {Impact of Uncoordinated Plug-in Electric Vehicle Charging on Residential Power Demand},
+  journal = {Nature Energy},
+  volume  = {3},
+  number  = {3},
+  pages   = {193--201},
+  year    = {2018},
+  doi     = {10.1038/s41560-017-0074-z}
+}
+@article{Powell2022Infrastructure,
+  author  = {Powell, Siobhan and Cezar, Gustavo Vianna and Min, Liang and Azevedo, In{\^e}s M. L. and Rajagopal, Ram},
+  title   = {Charging Infrastructure Access and Operation to Reduce the Grid Impacts of Deep Electric Vehicle Adoption},
+  journal = {Nature Energy},
+  volume  = {7},
+  number  = {10},
+  pages   = {932--945},
+  year    = {2022},
+  doi     = {10.1038/s41560-022-01105-7}
+}
+@article{Crozier2020SmartCharging,
+  author  = {Crozier, Constance and Morstyn, Thomas and McCulloch, Malcolm},
+  title   = {The Opportunity for Smart Charging to Mitigate the Impact of Electric Vehicles on Transmission and Distribution Systems},
+  journal = {Applied Energy},
+  volume  = {268},
+  pages   = {114973},
+  year    = {2020},
+  doi     = {10.1016/j.apenergy.2020.114973}
+}
+@article{Mangipinto2022Europe,
+  author  = {Mangipinto, Andrea and Lombardi, Francesco and Sanvito, Francesco Davide and Pavi{\v{c}}evi{\'c}, Matija and Quoilin, Sylvain and Colombo, Emanuela},
+  title   = {Impact of Mass-Scale Deployment of Electric Vehicles and Benefits of Smart Charging Across All {European} Countries},
+  journal = {Applied Energy},
+  volume  = {312},
+  pages   = {118676},
+  year    = {2022},
+  doi     = {10.1016/j.apenergy.2022.118676}
+}
+@article{Szinai2020GridCosts,
+  author  = {Szinai, Julia K. and Sheppard, Colin J. R. and Abhyankar, Nikit and Gopal, Anand R.},
+  title   = {Reduced Grid Operating Costs and Renewable Energy Curtailment with Electric Vehicle Charge Management},
+  journal = {Energy Policy},
+  volume  = {136},
+  pages   = {111051},
+  year    = {2020},
+  doi     = {10.1016/j.enpol.2019.111051}
+}
+@article{Hanemann2017Strategies,
+  author  = {Hanemann, Philipp and Behnert, Marika and Bruckner, Thomas},
+  title   = {Effects of Electric Vehicle Charging Strategies on the {German} Power System},
+  journal = {Applied Energy},
+  volume  = {203},
+  pages   = {608--622},
+  year    = {2017},
+  doi     = {10.1016/j.apenergy.2017.06.039}
+}
+@article{Schill2015Germany,
+  author  = {Schill, Wolf-Peter and Gerbaulet, Clemens},
+  title   = {Power System Impacts of Electric Vehicles in {Germany}: Charging with Coal or Renewables?},
+  journal = {Applied Energy},
+  volume  = {156},
+  pages   = {185--196},
+  year    = {2015},
+  doi     = {10.1016/j.apenergy.2015.07.012}
+}
+@article{Richardson2013Review,
+  author  = {Richardson, David B.},
+  title   = {Electric Vehicles and the Electric Grid: A Review of Modeling Approaches, Impacts, and Renewable Energy Integration},
+  journal = {Renewable and Sustainable Energy Reviews},
+  volume  = {19},
+  pages   = {247--254},
+  year    = {2013},
+  doi     = {10.1016/j.rser.2012.11.042}
+}
+@article{KamanaWilliams2024Peak,
+  author  = {Williams, B. and Bishop, D. and Hooper, G. and Chase, J. G.},
+  title   = {Driving Change: Electric Vehicle Charging Behavior and Peak Loading},
+  journal = {Renewable and Sustainable Energy Reviews},
+  volume  = {189},
+  pages   = {113953},
+  year    = {2024},
+  doi     = {10.1016/j.rser.2023.113953}
+}
+@article{Fischer2019Residential,
+  author  = {Fischer, David and Harbrecht, Alexander and Surmann, Arne and McKenna, Russell},
+  title   = {Electric Vehicles' Impacts on Residential Electric Local Profiles -- A Stochastic Modelling Approach Considering Socio-Economic, Behavioural and Spatial Factors},
+  journal = {Applied Energy},
+  volume  = {233},
+  pages   = {644--658},
+  year    = {2019},
+  doi     = {10.1016/j.apenergy.2018.10.010}
+}
+@article{Heuberger2020EVolution,
+  author  = {Heuberger, Clara F. and Bains, Praveen K. and Mac Dowell, Niall},
+  title   = {The {EV}-olution of the Power System: A Spatio-Temporal Optimisation Model to Investigate the Impact of Electric Vehicle Deployment},
+  journal = {Applied Energy},
+  volume  = {257},
+  pages   = {113715},
+  year    = {2020},
+  doi     = {10.1016/j.apenergy.2019.113715}
+}
+@article{Strobel2022Regional,
+  author  = {Strobel, Leo and Schlund, Jonas and Pruckner, Marco},
+  title   = {Joint Analysis of Regional and National Power System Impacts of Electric Vehicles -- A Case Study for {Germany} on the County Level in 2030},
+  journal = {Applied Energy},
+  volume  = {315},
+  pages   = {118945},
+  year    = {2022},
+  doi     = {10.1016/j.apenergy.2022.118945}
+}
+@article{Kempton2005Fundamentals,
+  author  = {Kempton, Willett and Tomi{\'c}, Jasna},
+  title   = {Vehicle-to-Grid Power Fundamentals: Calculating Capacity and Net Revenue},
+  journal = {Journal of Power Sources},
+  volume  = {144},
+  number  = {1},
+  pages   = {268--279},
+  year    = {2005},
+  doi     = {10.1016/j.jpowsour.2004.12.025}
+}
+@article{Kempton2005Implementation,
+  author  = {Kempton, Willett and Tomi{\'c}, Jasna},
+  title   = {Vehicle-to-Grid Power Implementation: From Stabilizing the Grid to Supporting Large-Scale Renewable Energy},
+  journal = {Journal of Power Sources},
+  volume  = {144},
+  number  = {1},
+  pages   = {280--294},
+  year    = {2005},
+  doi     = {10.1016/j.jpowsour.2004.12.022}
+}
+@article{Li2026UltraFast,
+  author  = {Li, J. and Lin, X. and Huang, H. and Wang, R. and Zhong, W. and Lin, X. and others},
+  title   = {Optimal Operation of Grid-Friendly Megawatt-Level Ultra-Fast {EV} Charging Stations: A Review on Constraints, Objectives and Algorithms for Grid-Interactive Operation},
+  journal = {Applied Energy},
+  volume  = {405},
+  pages   = {127202},
+  year    = {2026},
+  doi     = {10.1016/j.apenergy.2025.127202}
+}
+
+% ===== References cited in the ACN-Data descriptor (DOIs from its reference list)
+@article{ClementNyns2010,
+  author  = {Clement-Nyns, K. and Haesen, E. and Driesen, J.},
+  title   = {The Impact of Charging Plug-In Hybrid Electric Vehicles on a Residential Distribution Grid},
+  journal = {IEEE Transactions on Power Systems},
+  volume  = {25},
+  number  = {1},
+  pages   = {371--380},
+  year    = {2010},
+  doi     = {10.1109/TPWRS.2009.2036481}
+}
+@article{Chen2014ValleyFilling,
+  author  = {Chen, Niangjun and Tan, Chee Wei and Quek, Tony Q. S.},
+  title   = {Electric Vehicle Charging in Smart Grid: Optimality and Valley-Filling Algorithms},
+  journal = {IEEE Journal of Selected Topics in Signal Processing},
+  volume  = {8},
+  number  = {6},
+  pages   = {1073--1083},
+  year    = {2014},
+  doi     = {10.1109/JSTSP.2014.2334275}
+}
+@article{deHoog2015Network,
+  author  = {de Hoog, Julian and Alpcan, Tansu and Brazil, Marcus and Thomas, Doreen Anne and Mareels, Iven},
+  title   = {Optimal Charging of Electric Vehicles Taking Distribution Network Constraints Into Account},
+  journal = {IEEE Transactions on Power Systems},
+  volume  = {30},
+  number  = {1},
+  pages   = {365--375},
+  year    = {2015},
+  doi     = {10.1109/TPWRS.2014.2318293}
+}
+@article{Denholm2013PV,
+  author  = {Denholm, Paul and Kuss, Michael and Margolis, Robert M.},
+  title   = {Co-Benefits of Large Scale Plug-In Hybrid Electric Vehicle and Solar {PV} Deployment},
+  journal = {Journal of Power Sources},
+  volume  = {236},
+  pages   = {350--356},
+  year    = {2013},
+  doi     = {10.1016/j.jpowsour.2012.10.007}
+}
+@inproceedings{Develder2016Flex,
+  author    = {Develder, Chris and Sadeghianpourhamami, Nasrin and Strobbe, Matthias and Refa, Nazir},
+  title     = {Quantifying Flexibility in {EV} Charging as {DR} Potential: Analysis of Two Real-World Data Sets},
+  booktitle = {2016 IEEE International Conference on Smart Grid Communications (SmartGridComm)},
+  pages     = {600--605},
+  year      = {2016},
+  doi       = {10.1109/SmartGridComm.2016.7778827}
+}
+@article{Flammini2019Stats,
+  author  = {Flammini, Marco Giacomo and Prettico, Giuseppe and Julea, Andreea and Fulli, Gianluca and Mazza, Andrea and Chicco, Gianfranco},
+  title   = {Statistical Characterisation of the Real Transaction Data Gathered from Electric Vehicle Charging Stations},
+  journal = {Electric Power Systems Research},
+  volume  = {166},
+  pages   = {136--150},
+  year    = {2019},
+  doi     = {10.1016/j.epsr.2018.09.022}
+}
+@article{Gong2012Transformer,
+  author  = {Gong, Qiuming and Midlam-Mohler, Shawn and Marano, Vincenzo and Rizzoni, Giorgio},
+  title   = {Study of {PEV} Charging on Residential Distribution Transformer Life},
+  journal = {IEEE Transactions on Smart Grid},
+  volume  = {3},
+  number  = {1},
+  pages   = {404--412},
+  year    = {2012},
+  doi     = {10.1109/TSG.2011.2163650}
+}
+@article{Lucas2018Indicators,
+  author  = {Lucas, Alexandre and Prettico, Giuseppe and Flammini, Marco and Kotsakis, Evangelos and Fulli, Gianluca and Masera, Marcelo},
+  title   = {Indicator-Based Methodology for Assessing {EV} Charging Infrastructure Using Exploratory Data Analysis},
+  journal = {Energies},
+  volume  = {11},
+  number  = {7},
+  pages   = {1869},
+  year    = {2018},
+  doi     = {10.3390/en11071869}
+}
+@article{Rivera2017Aggregators,
+  author  = {Rivera, Jose and Goebel, Christoph and Jacobsen, Hans-Arno},
+  title   = {Distributed Convex Optimization for Electric Vehicle Aggregators},
+  journal = {IEEE Transactions on Smart Grid},
+  volume  = {8},
+  number  = {4},
+  pages   = {1852--1863},
+  year    = {2017},
+  doi     = {10.1109/TSG.2015.2509030}
+}
+@article{Wang2016Predictive,
+  author  = {Wang, Bin and Wang, Yubo and Nazaripouya, Hamidreza and Qiu, Charlie and Chu, Chi-cheng and Gadh, Rajit},
+  title   = {Predictive Scheduling Framework for Electric Vehicles Considering Uncertainties of User Behaviors},
+  journal = {IEEE Internet of Things Journal},
+  year    = {2016},
+  doi     = {10.1109/JIOT.2016.2617314}
+}
+@article{Wu2017Office,
+  author  = {Wu, Di and Zeng, Haibo and Lu, Chao and Boulet, Benoit},
+  title   = {Two-Stage Energy Management for Office Buildings With Workplace {EV} Charging and Renewable Energy},
+  journal = {IEEE Transactions on Transportation Electrification},
+  volume  = {3},
+  number  = {1},
+  pages   = {225--237},
+  year    = {2017},
+  doi     = {10.1109/TTE.2017.2659626}
+}
+@inproceedings{Ardakanian2014Deadlines,
+  author    = {Ardakanian, Omid and Rosenberg, Catherine and Keshav, S.},
+  title     = {Quantifying the Benefits of Extending Electric Vehicle Charging Deadlines with Solar Generation},
+  booktitle = {2014 IEEE International Conference on Smart Grid Communications (SmartGridComm)},
+  pages     = {620--625},
+  year      = {2014},
+  doi       = {10.1109/SmartGridComm.2014.7007716}
+}
+@inproceedings{Putrus2009Impact,
+  author    = {Putrus, G. A. and Suwanapingkarl, P. and Johnston, D. and Bentley, E. C. and Narayana, M.},
+  title     = {Impact of Electric Vehicles on Power Distribution Networks},
+  booktitle = {2009 IEEE Vehicle Power and Propulsion Conference},
+  pages     = {827--831},
+  year      = {2009},
+  doi       = {10.1109/VPPC.2009.5289760}
+}
+@inproceedings{Ramanujam2017Impact,
+  author    = {Ramanujam, Arvind and Sankaranarayanan, Pandeeswari and Vasan, Arun and Jayaprakash, Rajesh and Sarangan, Venkatesh and Sivasubramaniam, Anand},
+  title     = {Quantifying the Impact of Electric Vehicles on the Electric Grid: A Simulation Based Case-Study},
+  booktitle = {Proceedings of the Eighth International Conference on Future Energy Systems (e-Energy '17)},
+  pages     = {228--233},
+  year      = {2017},
+  doi       = {10.1145/3077839.3077854}
+}
+@inproceedings{Lee2016SharedSolar,
+  author    = {Lee, Stephen and Iyengar, Srinivasan and Irwin, David and Shenoy, Prashant},
+  title     = {Shared Solar-Powered {EV} Charging Stations: Feasibility and Benefits},
+  booktitle = {2016 Seventh International Green and Sustainable Computing Conference (IGSC)},
+  pages     = {1--8},
+  year      = {2016},
+  doi       = {10.1109/IGCC.2016.7892600}
+}
+
+% ===== Robust optimisation and predictive control ==========================
+@article{Soyster1973,
+  author  = {Soyster, A. L.},
+  title   = {Technical Note -- Convex Programming with Set-Inclusive Constraints and Applications to Inexact Linear Programming},
+  journal = {Operations Research},
+  volume  = {21},
+  number  = {5},
+  pages   = {1154--1157},
+  year    = {1973},
+  doi     = {10.1287/opre.21.5.1154}
+}
+@article{Bertsimas2004Price,
+  author  = {Bertsimas, Dimitris and Sim, Melvyn},
+  title   = {The Price of Robustness},
+  journal = {Operations Research},
+  volume  = {52},
+  number  = {1},
+  pages   = {35--53},
+  year    = {2004},
+  doi     = {10.1287/opre.1030.0065}
+}
+@article{Bertsimas2018DataDriven,
+  author  = {Bertsimas, Dimitris and Gupta, Vishal and Kallus, Nathan},
+  title   = {Data-Driven Robust Optimization},
+  journal = {Mathematical Programming},
+  volume  = {167},
+  number  = {2},
+  pages   = {235--292},
+  year    = {2018},
+  doi     = {10.1007/s10107-017-1125-8}
+}
+@article{Esfahani2018Wasserstein,
+  author  = {Mohajerin Esfahani, Peyman and Kuhn, Daniel},
+  title   = {Data-Driven Distributionally Robust Optimization Using the {Wasserstein} Metric: Performance Guarantees and Tractable Reformulations},
+  journal = {Mathematical Programming},
+  volume  = {171},
+  number  = {1--2},
+  pages   = {115--166},
+  year    = {2018},
+  doi     = {10.1007/s10107-017-1172-1}
+}
+@article{Gorissen2015Guide,
+  author  = {Gorissen, Bram L. and Yan{\i}ko{\u{g}}lu, {\.I}hsan and den Hertog, Dick},
+  title   = {A Practical Guide to Robust Optimization},
+  journal = {Omega},
+  volume  = {53},
+  pages   = {124--137},
+  year    = {2015},
+  doi     = {10.1016/j.omega.2014.12.006}
+}
+@article{Mayne2014MPC,
+  author  = {Mayne, David Q.},
+  title   = {Model Predictive Control: Recent Developments and Future Promise},
+  journal = {Automatica},
+  volume  = {50},
+  number  = {12},
+  pages   = {2967--2986},
+  year    = {2014},
+  doi     = {10.1016/j.automatica.2014.10.128}
+}
+
+% ===== Added in revision: recent EV-flexibility literature and solar modelling tools
+@article{Chemudupaty2025Intraday,
+  author  = {Chemudupaty, Raviteja and Hornek, Timothee and Pavi{\'c}, Ivan and Potenciano Menci, Sergio},
+  title   = {Optimizing Trading of Electric Vehicle Charging Flexibility in the Continuous Intraday Market under User and Market Uncertainties},
+  journal = {Applied Energy},
+  volume  = {381},
+  pages   = {125103},
+  year    = {2025},
+  doi     = {10.1016/j.apenergy.2024.125103}
+}
+@article{Chemudupaty2025SpotMarkets,
+  author  = {Chemudupaty, Raviteja and Bahmani, Ramin and Fridgen, Gilbert and Marxen, Hanna and Pavi{\'c}, Ivan},
+  title   = {Uncertain Electric Vehicle Charging Flexibility, Its Value on Spot Markets, and the Impact of User Behaviour},
+  journal = {Applied Energy},
+  volume  = {394},
+  pages   = {126063},
+  year    = {2025},
+  doi     = {10.1016/j.apenergy.2025.126063}
+}
+@article{Kreft2024Predictability,
+  author  = {Kreft, Markus and Brudermueller, Tobias and Fleisch, Elgar and Staake, Thorsten},
+  title   = {Predictability of Electric Vehicle Charging: Explaining Extensive User Behavior-Specific Heterogeneity},
+  journal = {Applied Energy},
+  volume  = {370},
+  pages   = {123544},
+  year    = {2024},
+  doi     = {10.1016/j.apenergy.2024.123544}
+}
+@article{Tang2025TripChain,
+  author  = {Tang, S. and Mu, Y. and Jia, H. and Jin, X. and Yu, X.},
+  title   = {Flexibility Potential of Electric Vehicle Charging: A Trip Chain Analysis under Bi-Criterion Stochastic Dynamic User Equilibrium},
+  journal = {Advances in Applied Energy},
+  volume  = {19},
+  year    = {2025},
+  doi     = {10.1016/j.adapen.2025.100240}
+}
+@article{Frank2025Germany,
+  author  = {Frank, Fabio and Gnann, Till and Speth, Daniel and Wei{\ss}enburger, Bastian and Lux, Benjamin},
+  title   = {Potential Impact of Controlled Electric Car Charging and Vehicle-to-Grid on {Germany}'s Future Power System},
+  journal = {Advances in Applied Energy},
+  volume  = {19},
+  pages   = {100227},
+  year    = {2025},
+  doi     = {10.1016/j.adapen.2025.100227}
+}
+@article{Lauvergne2022Adequacy,
+  author  = {Lauvergne, R{\'e}mi and Perez, Yannick and Fran{\c{c}}on, Mathilde and Tejeda De La Cruz, Alberto},
+  title   = {Integration of Electric Vehicles into Transmission Grids: A Case Study on Generation Adequacy in {Europe} in 2040},
+  journal = {Applied Energy},
+  volume  = {326},
+  pages   = {120030},
+  year    = {2022},
+  doi     = {10.1016/j.apenergy.2022.120030}
+}
+@article{Holmgren2018pvlib,
+  author  = {Holmgren, William F. and Hansen, Clifford W. and Mikofski, Mark A.},
+  title   = {pvlib python: A Python Package for Modeling Solar Energy Systems},
+  journal = {Journal of Open Source Software},
+  volume  = {3},
+  number  = {29},
+  pages   = {884},
+  year    = {2018},
+  doi     = {10.21105/joss.00884}
+}
+@article{Anderson2023pvlib,
+  author  = {Anderson, K. and Hansen, C. and Holmgren, W. and Jensen, A. and Mikofski, M. and Driesse, A.},
+  title   = {pvlib python: 2023 Project Update},
+  journal = {Journal of Open Source Software},
+  volume  = {8},
+  number  = {92},
+  pages   = {5994},
+  year    = {2023},
+  doi     = {10.21105/joss.05994}
+}
+

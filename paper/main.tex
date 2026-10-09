@@ -1,0 +1,96 @@
+\documentclass[preprint,11pt]{elsarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\usepackage{lineno}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{makecell}
+\biboptions{sort&compress}
+\journal{Applied Energy}
+% tighter float placement: fewer half-empty pages
+\renewcommand{\topfraction}{0.9}\renewcommand{\bottomfraction}{0.8}\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.85}\setcounter{topnumber}{3}\setcounter{bottomnumber}{2}\setcounter{totalnumber}{5}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}\setlength{\floatsep}{8pt plus 2pt minus 2pt}\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\def\bibfont{\small}
+\setlength{\emergencystretch}{3em}
+\input{results_macros}
+
+\begin{document}
+\begin{titlepage}
+\begin{center}
+{\Large\bfseries Realising grid flexibility from workplace electric vehicle charging under imperfect information and tariff signals\par}
+\vspace{1.5cm}
+{\large Mansour Almuwallad$^{\mathrm{a},*}$\par}
+\vspace{0.4cm}
+$^{\mathrm{a}}$Department of Management Science, Yanbu Industrial College,\\
+Royal Commission for Jubail and Yanbu, Yanbu 45130, Saudi Arabia\par
+\end{center}
+\vspace{1.5cm}
+\noindent\textbf{$^{*}$Corresponding author}\\
+Mansour Almuwallad\\
+Department of Management Science, Yanbu Industrial College, Royal Commission for Jubail and Yanbu, Yanbu 45130, Saudi Arabia\\
+E-mail: almuwalladm@rcjy.edu.sa\\
+ORCID: 0009-0002-9547-0621
+
+\vspace{1cm}
+\noindent\textbf{Article type:} Full Length Research Article\\
+\textbf{Submitted to:} Applied Energy
+
+\vspace{1cm}
+\noindent\textbf{Declarations}\\
+Competing interests: none. Funding: this research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors. Data availability: source data are public (ACN-Data); code, processed data and results are available on request.
+\end{titlepage}
+\setcounter{page}{1}
+
+\begin{frontmatter}
+
+\title{Realising grid flexibility from workplace electric vehicle charging under imperfect information and tariff signals}
+
+\author[inst]{Mansour Almuwallad\corref{cor}}
+\ead{almuwalladm@rcjy.edu.sa}
+\cortext[cor]{Corresponding author. ORCID: 0009-0002-9547-0621}
+\affiliation[inst]{organization={Department of Management Science, Yanbu Industrial College, Royal Commission for Jubail and Yanbu},
+  city={Yanbu}, postcode={45130}, country={Saudi Arabia}}
+
+\begin{abstract}
+Workplace electric vehicle (EV) charging offers large technical flexibility, but how much of it is usable by the grid depends on what controllers know and what tariffs reward. We replay 13,623 open ACN-Data sessions from two California workplaces (July--December 2019) under a receding-horizon linear program that prices only increments above the month-to-date peak, with exact robust and PV-aware variants. Peak-state control roughly halves the site peak (296 to 140\,kW; 105 to 52\,kW), but acting on driver declarations leaves one vehicle in eight short of its energy. Robustness calibrated to empirical declaration errors cannot close this gap: declared energy is biased upwards and a third of drivers leave early. Re-using capacity already billed in the month restores service above 99\% without a new peak, confirmed on held-out 2021 sessions. The controllers turn this into grid-usable flexibility. They keep a transformer rated at half the uncontrolled peak within its rating while serving at least 99\% of energy, whereas uncontrolled charging overloads it twofold. With behind-the-meter PV, PV-aware control lowers the import peak to about a quarter of its uncontrolled value where arrivals precede solar output. A tariff sweep and stylised archetypes show that the presence of a demand charge, not its level or the energy-price structure, decides whether peak reduction is delivered, while evening-peak or flat energy prices remove the conflict with midday charging. Realisable EV flexibility therefore depends on information quality and tariff design, not only on parking duration and connected capacity.
+\end{abstract}
+
+\begin{keyword}
+Electric vehicles \sep Demand flexibility \sep Smart charging \sep Demand charges \sep Peak reduction \sep Model predictive control
+\end{keyword}
+
+\end{frontmatter}
+
+\linenumbers
+
+\input{sec_intro_lit_methods}
+\input{sec_results_discussion}
+
+\section*{CRediT authorship contribution statement}
+\textbf{Mansour Almuwallad:} Conceptualization, Methodology, Software, Data curation, Formal analysis, Investigation, Validation, Visualization, Writing -- original draft, Writing -- review and editing.
+
+\section*{Declaration of competing interest}
+The author declares no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+\section*{Funding}
+This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
+
+\section*{Data availability}
+The session data analysed in this study are publicly available: ACN-Data \cite{Lee2019ACNData,ACNDataset}, in the extracts for May--December 2019 and May--August 2021 redistributed with SustainGym v0.1.7 under CC-BY-4.0 \cite{Yeh2023SustainGym}. Tariff values are those of SCE TOU-EV-4 as encoded in acnportal v0.3.3 \cite{SCETOUEV4}. The code, processed data and results generated in this study will be made available on request.
+
+\section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
+During the preparation of this work the author used Claude (Anthropic) to assist with code development, literature retrieval and drafting. After using this tool, the author reviewed and edited the content as needed and takes full responsibility for the content of the published article.
+
+\clearpage
+\appendix
+\setcounter{table}{0}\setcounter{figure}{0}
+\section{Session filtering}\label{app:flow}
+\input{tables/Table6_filter_flow}
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+\end{document}

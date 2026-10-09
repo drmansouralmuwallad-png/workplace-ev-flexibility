@@ -1,0 +1,280 @@
+{
+  "_note": "Every null value must be filled from a primary source before real experiments run; the code refuses to run with nulls.",
+  "api": {
+    "base_url": "https://ev.caltech.edu/api/v1/",
+    "token_env_var": "ACN_API_TOKEN"
+  },
+  "pull": {
+    "sites": [
+      "jpl",
+      "caltech"
+    ],
+    "start_local": "2019-05-01",
+    "end_local": "2020-01-01",
+    "_note": "Set the final window after inspecting the monthly session-count plot for structural breaks (Caltech free-to-paid on 2018-11-01; possible pandemic-era collapse in 2020)."
+  },
+  "cleaning": {
+    "min_kwh": 0.5,
+    "min_duration_h": 0.25,
+    "max_duration_h": 48.0,
+    "max_implied_avg_kw": 20.0,
+    "exclude_station_ids": [],
+    "_note_exclude": "Add the Caltech DC fast charger stationID once identified from the raw pull (sessions with implied average power above max_implied_avg_kw are also dropped)."
+  },
+  "physics": {
+    "period_minutes": 5,
+    "default_rbar_kw": 6.6,
+    "_note_rbar": "Per-session max rate = max(default_rbar_kw, kWh / (doneChargingTime - connectionTime)), so actual delivered energy is always feasible. Replace default with station ratings if available.",
+    "site_capacity_kw": {
+      "caltech": 150.0,
+      "jpl": 195.0
+    },
+    "_note_capacity": "Values reported for 2019 by Lee, Li & Low (e-Energy '19). Confirm or treat as a sensitivity parameter."
+  },
+  "tariff": {
+    "name": "SCE TOU-EV-4 (as encoded in acnportal v0.3.3, file sce_tou_ev_4_march_2019.json)",
+    "schedule_id": "TOU-EV-4",
+    "effective_date": "2019-03-01",
+    "source_url": "https://www1.sce.com/NR/sc3/tm2/pdf/ce141-12.pdf",
+    "_note": "Single monthly demand charge 15.51 $/kW applied to the all-hours maximum (FRD slot). TRD=0 in the base case; the TRD mask (summer weekday 12-18, winter weekday 12-18) is used only in sensitivity runs.",
+    "frd_per_kw_month": 15.51,
+    "trd_per_kw_month": 0.0,
+    "rules": [
+      {
+        "name": "summer_wd_00-08",
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "days": "weekday",
+        "start_h": 0,
+        "end_h": 8,
+        "price_per_kwh": 0.05623,
+        "trd": false
+      },
+      {
+        "name": "summer_wd_08-12",
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "days": "weekday",
+        "start_h": 8,
+        "end_h": 12,
+        "price_per_kwh": 0.0925,
+        "trd": false
+      },
+      {
+        "name": "summer_wd_12-18",
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "days": "weekday",
+        "start_h": 12,
+        "end_h": 18,
+        "price_per_kwh": 0.26668,
+        "trd": true
+      },
+      {
+        "name": "summer_wd_18-23",
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "days": "weekday",
+        "start_h": 18,
+        "end_h": 23,
+        "price_per_kwh": 0.0925,
+        "trd": false
+      },
+      {
+        "name": "summer_wd_23-24",
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "days": "weekday",
+        "start_h": 23,
+        "end_h": 24,
+        "price_per_kwh": 0.05623,
+        "trd": false
+      },
+      {
+        "name": "summer_we_00-24",
+        "months": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "days": "weekend",
+        "start_h": 0,
+        "end_h": 24,
+        "price_per_kwh": 0.05623,
+        "trd": false
+      },
+      {
+        "name": "winter_wd_00-08",
+        "months": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          10,
+          11,
+          12
+        ],
+        "days": "weekday",
+        "start_h": 0,
+        "end_h": 8,
+        "price_per_kwh": 0.06087,
+        "trd": false
+      },
+      {
+        "name": "winter_wd_08-12",
+        "months": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          10,
+          11,
+          12
+        ],
+        "days": "weekday",
+        "start_h": 8,
+        "end_h": 12,
+        "price_per_kwh": 0.07492,
+        "trd": false
+      },
+      {
+        "name": "winter_wd_12-18",
+        "months": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          10,
+          11,
+          12
+        ],
+        "days": "weekday",
+        "start_h": 12,
+        "end_h": 18,
+        "price_per_kwh": 0.0869,
+        "trd": true
+      },
+      {
+        "name": "winter_wd_18-23",
+        "months": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          10,
+          11,
+          12
+        ],
+        "days": "weekday",
+        "start_h": 18,
+        "end_h": 23,
+        "price_per_kwh": 0.07492,
+        "trd": false
+      },
+      {
+        "name": "winter_wd_23-24",
+        "months": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          10,
+          11,
+          12
+        ],
+        "days": "weekday",
+        "start_h": 23,
+        "end_h": 24,
+        "price_per_kwh": 0.06087,
+        "trd": false
+      },
+      {
+        "name": "winter_we_00-24",
+        "months": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          10,
+          11,
+          12
+        ],
+        "days": "weekend",
+        "start_h": 0,
+        "end_h": 24,
+        "price_per_kwh": 0.06087,
+        "trd": false
+      }
+    ]
+  },
+  "model": {
+    "shortfall_penalty_per_kwh": 5.0,
+    "_note_penalty": "Modelling weight on undelivered energy, not a tariff value. Swept in the sensitivity analysis.",
+    "tiebreak_eps": 1e-06,
+    "resolve_every_periods": 3,
+    "train_days": 60,
+    "_note_train": "Lee, Li & Low (2019) found 30-60 day look-back windows best for behaviour prediction; 60 is the default, sweep 30/60/90.",
+    "arrival_hour_bucket": 3,
+    "robust_quantiles": [
+      0.5,
+      0.7,
+      0.9
+    ],
+    "policies": [
+      "uncontrolled",
+      "edf",
+      "llf",
+      "mpc_nominal",
+      "mpc_robust",
+      "offline"
+    ]
+  },
+  "experiments": {
+    "test_months": {
+      "jpl": [
+        "2019-07",
+        "2019-08",
+        "2019-09",
+        "2019-10",
+        "2019-11",
+        "2019-12"
+      ],
+      "caltech": [
+        "2019-07",
+        "2019-08",
+        "2019-09",
+        "2019-10",
+        "2019-11",
+        "2019-12"
+      ]
+    },
+    "_note": "Data: ACN-Data extracts 2019-05-01..2019-12-31 redistributed with SustainGym v0.1.7; 60-day training windows start 2019-05-02 at the earliest."
+  }
+}

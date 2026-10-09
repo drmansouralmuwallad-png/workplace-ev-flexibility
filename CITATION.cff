@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Realising grid flexibility from workplace electric vehicle charging: code and data"
+authors:
+  - family-names: Almuwallad
+    given-names: Mansour
+    affiliation: "Yanbu Industrial College, Royal Commission for Jubail and Yanbu"
+    orcid: "https://orcid.org/0009-0002-9547-0621"
+version: 1.0.0
+date-released: 2026-10-09
+license: MIT
+repository-code: "https://github.com/drmansouralmuwallad-png/workplace-ev-flexibility"
+references:
+  - type: conference-paper
+    title: "ACN-Data: Analysis and Applications of an Open EV Charging Dataset"
+    authors:
+      - family-names: Lee
+        given-names: Zachary J.
+      - family-names: Li
+        given-names: Tongxin
+      - family-names: Low
+        given-names: Steven H.
+    doi: 10.1145/3307772.3328313
+    year: 2019

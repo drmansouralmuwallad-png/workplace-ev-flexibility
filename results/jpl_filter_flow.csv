@@ -1,0 +1,11 @@
+step,n_remaining,n_removed
+raw,11830,0
+drop duplicate sessionID,11830,0
+"has arrival, departure, kWh",11830,0
+kWh >= 0.5,11830,0
+0.25 h <= duration <= 48.0 h,11823,7
+"done within [arrival, departure]",11823,0
+implied avg power <= 20.0 kW (drops DC fast charging),11823,0
+claimed (usable declaration),11442,
+declaration present but invalid -> treated as unclaimed,0,
+declaration edited after plug-in (first input used),0,
