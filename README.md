@@ -40,6 +40,8 @@ python run_all.py heldout         # out-of-sample check on July-August 2021
 python run_extensions.py pv       # PV-aware control
 python run_extensions.py xfmr     # transformer hosting limits (50% and 35%)
 python run_extensions.py tariff2  # tariff archetypes (evening-peak TOU, flat energy)
+python run_all.py sens_topup      # robustness of the top-up rule (capacity, tariff, calibration, penalty)
+python run_all.py demand_scale    # higher assumed driver demand (1.1x and 1.25x recorded energy)
 
 # Analysis, figures and tables
 python diagnose_unmet.py
@@ -50,12 +52,15 @@ python make_revision_assets.py
 python make_portrait_tables.py
 python make_extension_assets.py
 python make_compact_tables.py
+python make_topup_robustness.py
+python make_demand_scale_table.py
 
-# Manuscript
+# Manuscript and Supplementary Material
 cd paper && pdflatex main && bibtex main && pdflatex main && pdflatex main
+pdflatex Supplementary_Material && bibtex Supplementary_Material && pdflatex Supplementary_Material && pdflatex Supplementary_Material
 ```
 
-All scripts are run from the repository root. The full simulation set takes roughly 1–2 hours on one CPU core. You can skip the simulations: the analysis and figure scripts read the shipped `results/`.
+Tables that appear in the Supplementary Material are kept in `paper/tables/supp/`; the table scripts write to `paper/tables/`, so copy a regenerated supplementary table into `supp/` if you change it. All scripts are run from the repository root. The full simulation set takes roughly 1–2 hours on one CPU core. You can skip the simulations: the analysis and figure scripts read the shipped `results/`.
 
 ## Data
 

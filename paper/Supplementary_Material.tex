@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+\input{results_macros}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thesection}{S\arabic{section}}
+\setlength{\emergencystretch}{3em}
+
+\title{Supplementary Material for\\[4pt]
+\large Realising grid flexibility from workplace electric vehicle charging under imperfect information and tariff signals}
+\author{Mansour Almuwallad\\ \small Department of Management Science, Yanbu Industrial College,\\ \small Royal Commission for Jubail and Yanbu, Yanbu 45130, Saudi Arabia\\ \small almuwalladm@rcjy.edu.sa}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent This document contains supporting tables and figures referred to in the main article as Tables S1--S7 and Figs.~S1--S5. Section, table and figure numbers without the prefix S refer to the main article. All values are computed by the released code and are reproducible from the public repository \cite{ThisStudyRepo}.
+
+\section{Data}
+The filtering flow of the 2019 sessions is given in Table~\ref{tab:flow}. Daily delivered energy and the weekday distributions of arrival and departure times are shown in Fig.~\ref{supp:data}. JPL access is restricted to employees, whereas the Caltech garage is open to the public (Section~3.1).
+
+\input{tables/supp/Table6_filter_flow}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/Fig2_data_overview.pdf}
+\caption{Daily energy delivered (top) and weekday arrival and departure times (bottom) at JPL and Caltech, May--December 2019.}
+\label{supp:data}
+\end{figure}
+
+\section{Tariff}
+Table~\ref{tab:tariff} lists the TOU-EV-4 energy prices used for billing; the demand charge is 15.51\,USD per kW of monthly maximum demand.
+
+\input{tables/supp/Table3_tariff}
+
+\section{Monthly peaks}
+Fig.~\ref{supp:peaks} shows the monthly peak demand of each policy, complementing the six-month means in Tables 4 and 5.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/Fig7_monthly_peaks.pdf}
+\caption{Monthly peak demand by policy. The dotted line is the site capacity. At Caltech the capacity never binds, so LLF (and EDF) coincide with uncontrolled charging and the uncontrolled line is hidden behind the LLF line; MPC + top-up has the same peak as nominal MPC by construction.}
+\label{supp:peaks}
+\end{figure}
+
+\section{Load-duration curves}
+Fig.~\ref{supp:ldc} shows the normalised load-duration curves underlying the grid-flexibility metrics of Section~6.2.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/Fig11_load_duration.pdf}
+\caption{Normalised load-duration curves (July--December 2019), load divided by the uncontrolled peak. Only the top 45\% of the time axis is shown; the remainder is near zero for all policies.}
+\label{supp:ldc}
+\end{figure}
+
+\section{On-peak energy and solar coincidence}
+Table~\ref{tab:solar} reports the on-peak energy share and the solar-coincidence metrics of Section~4.7 for the PV-unaware policies, and Fig.~\ref{supp:pv} compares the August weekday load profiles with the output of an energy-neutral clear-sky PV array. Flattening the morning spike moves charging towards midday. With a half-size array the gains are smaller but have the same sign; self-sufficiency is then 33--38\% for all policies because the array covers less of the load. Under TOU-EV-4 the same shift raises the share of energy in the 12--18\,h on-peak block and the time-of-use energy cost by about 5\% relative to uncontrolled charging.
+
+\input{tables/supp/Table5b_solar}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/Fig12_pv_coincidence.pdf}
+\caption{Mean weekday load profiles in August 2019 against the output of an energy-neutral clear-sky PV array (pvlib, Ineichen model).}
+\label{supp:pv}
+\end{figure}
+
+\section{Calibrated uncertainty sets}
+Fig.~\ref{supp:sets} shows the calibrated deadline shifts $\underline{\Delta d}=Q_{1-q}(\Delta d)$ and energy multipliers $\overline\rho=Q_q(\rho)$ for claimed sessions. At $q=0.5$ the deadlines move 0.5--1\,h later and declared energy is scaled to 0.52--0.65 of its declared value; at $q=0.9$ deadlines move 1.3--2.8\,h earlier while the energy multiplier only returns to about 1.0.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/Fig8_calibrated_sets.pdf}
+\caption{Calibrated deadline shifts and energy multipliers for claimed sessions by test month and protection level $q$.}
+\label{supp:sets}
+\end{figure}
+
+\section{Sensitivity analysis}
+Table~\ref{tab:sens} reports the sensitivity runs of Section~5.3 for August and November 2019 (nominal MPC, robust MPC at $q=0.9$ and, where the objective changes, the hindsight optimum).
+
+\input{tables/supp/Table6_sensitivity}
+
+\section{Robustness of the top-up rule}
+Table~\ref{tab:topuprob} reports the top-up robustness runs of Section~6.10: the base case, site capacity scaled to 75\% and 50\%, twice the demand charge, 30- and 90-day calibration windows and a shortfall penalty of 20\,USD/kWh (four times the base value), each on August and November 2019 and on the held-out July and August 2021. Across all 56 scenario--site--month runs, the MPC + top-up peak equals the nominal MPC peak except in one month, where it is 1.8\,kW lower.
+
+\input{tables/supp/Table13_topup_robustness}
+
+\section{Higher driver demand}
+Service in the main article is measured against the energy each vehicle received in the recorded sessions, which the ACN's own controller may have truncated. Table~\ref{tab:demandscale} therefore raises every session's energy need to $\alpha=1.1$ and $1.25$ times its recorded energy, capped at $\bar r_i$ times its plugged-in duration so that the need remains deliverable; sessions that already charged at their maximum rate cannot grow, so total demand rises by 8--10\% and 18--23\%. Declarations are unchanged, and the training windows used for calibration are scaled in the same way. Nominal MPC falls to 81--95\% served, MPC + top-up serves 96.0--99.5\%, never with a higher peak than nominal MPC, and the hindsight optimum serves at least 99.7\%.
+
+\input{tables/supp/Table_demand_scale}
+
+\section{Tariff archetypes}
+Table~\ref{tab:arch} compares TOU-EV-4 with the two stylised archetypes of Section~4.10, all with the same demand charge. The evening-peak TOU keeps the TOU-EV-4 price levels with the on-peak block at 16--21\,h on weekdays and mid-peak prices at 8--16\,h and 21--23\,h; the flat price is the monthly time-weighted mean of the TOU-EV-4 energy price.
+
+\input{tables/supp/Table12_archetypes}
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+\end{document}

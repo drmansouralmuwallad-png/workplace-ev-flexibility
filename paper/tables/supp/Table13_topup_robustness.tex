@@ -1,0 +1,29 @@
+\begin{table}[H]
+\centering
+\caption{Robustness of the top-up rule. Means over August and November 2019 and over the held-out months July and August 2021. Served: energy served (\%) by nominal MPC (Nom.) and MPC + top-up (Top.); Full: vehicles fully served by MPC + top-up (\%); Peak red.\ and Saving: reduction of the monthly peak and of the bill of MPC + top-up relative to uncontrolled charging (\%). Site capacity scales the 195\,kW (JPL) and 150\,kW (Caltech) limits.}
+\label{tab:topuprob}
+\footnotesize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrrrrrrr@{}}
+\hline
+ & & \multicolumn{5}{c}{2019 (Aug, Nov)} & \multicolumn{5}{c}{2021 held out (Jul, Aug)} \\
+Site & Scenario & Nom. & Top. & Full & \makecell[r]{Peak\\red.} & Saving & Nom. & Top. & Full & \makecell[r]{Peak\\red.} & Saving \\
+\hline
+JPL & Base case & 96.1 & 99.8 & 98.6 & 56 & 37 & 91.0 & 98.6 & 96.3 & 42 & 24 \\
+ & Capacity $\times$0.75 & 96.1 & 99.8 & 98.7 & 56 & 37 & 91.0 & 98.6 & 96.1 & 43 & 25 \\
+ & Capacity $\times$0.5 & 94.1 & 97.1 & 90.9 & 68 & 43 & 91.0 & 98.6 & 96.0 & 42 & 24 \\
+ & Demand charge $\times$2 & 96.1 & 99.8 & 98.7 & 56 & 45 & 90.0 & 97.3 & 93.1 & 49 & 37 \\
+ & 30-day calibration & 96.1 & 99.8 & 98.8 & 56 & 37 & 91.5 & 98.7 & 96.0 & 42 & 25 \\
+ & 90-day calibration & 96.1 & 99.8 & 98.5 & 56 & 37 & 91.0 & 98.7 & 96.3 & 42 & 24 \\
+ & Penalty $\times$4 & 96.1 & 99.7 & 98.7 & 56 & 37 & 91.0 & 98.6 & 96.1 & 42 & 24 \\
+\hline
+Caltech & Base case & 96.5 & 99.1 & 95.3 & 54 & 37 & 83.7 & 97.1 & 95.0 & 53 & 34 \\
+ & Capacity $\times$0.75 & 96.5 & 99.1 & 95.4 & 54 & 37 & 83.7 & 97.1 & 95.0 & 53 & 34 \\
+ & Capacity $\times$0.5 & 96.5 & 99.1 & 95.3 & 55 & 37 & 83.7 & 97.1 & 95.0 & 53 & 34 \\
+ & Demand charge $\times$2 & 95.2 & 97.6 & 92.6 & 60 & 48 & 83.0 & 95.6 & 93.4 & 54 & 43 \\
+ & 30-day calibration & 96.5 & 99.0 & 95.5 & 55 & 37 & 83.7 & 97.1 & 95.1 & 53 & 34 \\
+ & 90-day calibration & 96.4 & 99.1 & 95.4 & 55 & 37 & 83.7 & 97.1 & 94.9 & 53 & 34 \\
+ & Penalty $\times$4 & 96.5 & 99.2 & 95.8 & 54 & 36 & 83.8 & 97.3 & 95.3 & 52 & 34 \\
+\hline
+\end{tabular*}
+\end{table}

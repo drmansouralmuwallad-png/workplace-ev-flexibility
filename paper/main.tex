@@ -8,13 +8,14 @@
 \usepackage{float}
 \usepackage{rotating}
 \usepackage{makecell}
+\usepackage{array}
 \biboptions{sort&compress}
 \journal{Applied Energy}
 % tighter float placement: fewer half-empty pages
 \renewcommand{\topfraction}{0.9}\renewcommand{\bottomfraction}{0.8}\renewcommand{\textfraction}{0.07}
 \renewcommand{\floatpagefraction}{0.85}\setcounter{topnumber}{3}\setcounter{bottomnumber}{2}\setcounter{totalnumber}{5}
 \setlength{\textfloatsep}{10pt plus 2pt minus 2pt}\setlength{\floatsep}{8pt plus 2pt minus 2pt}\setlength{\intextsep}{8pt plus 2pt minus 2pt}
-\def\bibfont{\small}
+\def\bibfont{\footnotesize}
 \setlength{\emergencystretch}{3em}
 \input{results_macros}
 
@@ -41,7 +42,7 @@ ORCID: 0009-0002-9547-0621
 
 \vspace{1cm}
 \noindent\textbf{Declarations}\\
-Competing interests: none. Funding: this research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors. Data availability: source data are public (ACN-Data); code, processed data and results are available on request.
+Competing interests: none. Funding: this research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors. Data availability: source data are public (ACN-Data); code, processed data and results are openly available at\\ {\small\url{https://github.com/drmansouralmuwallad-png/workplace-ev-flexibility}}.
 \end{titlepage}
 \setcounter{page}{1}
 
@@ -56,7 +57,7 @@ Competing interests: none. Funding: this research did not receive any specific g
   city={Yanbu}, postcode={45130}, country={Saudi Arabia}}
 
 \begin{abstract}
-Workplace electric vehicle (EV) charging offers large technical flexibility, but how much of it is usable by the grid depends on what controllers know and what tariffs reward. We replay 13,623 open ACN-Data sessions from two California workplaces (July--December 2019) under a receding-horizon linear program that prices only increments above the month-to-date peak, with exact robust and PV-aware variants. Peak-state control roughly halves the site peak (296 to 140\,kW; 105 to 52\,kW), but acting on driver declarations leaves one vehicle in eight short of its energy. Robustness calibrated to empirical declaration errors cannot close this gap: declared energy is biased upwards and a third of drivers leave early. Re-using capacity already billed in the month restores service above 99\% without a new peak, confirmed on held-out 2021 sessions. The controllers turn this into grid-usable flexibility. They keep a transformer rated at half the uncontrolled peak within its rating while serving at least 99\% of energy, whereas uncontrolled charging overloads it twofold. With behind-the-meter PV, PV-aware control lowers the import peak to about a quarter of its uncontrolled value where arrivals precede solar output. A tariff sweep and stylised archetypes show that the presence of a demand charge, not its level or the energy-price structure, decides whether peak reduction is delivered, while evening-peak or flat energy prices remove the conflict with midday charging. Realisable EV flexibility therefore depends on information quality and tariff design, not only on parking duration and connected capacity.
+Workplace electric vehicle (EV) charging offers large technical flexibility, but how much the grid can use depends on what controllers know and what tariffs reward. We replay 13,623 open ACN-Data sessions from two California workplaces (July--December 2019) under an established demand-charge-aware model predictive controller that prices only increments above the month-to-date peak. It roughly halves the site peak (296 to 140\,kW; 105 to 52\,kW), but acting on driver declarations leaves one vehicle in eight short of its energy. Robustness calibrated to empirical declaration errors cannot close this gap, because declared energy is biased upwards and a third of drivers leave early. Our main methodological contribution, a peak-state top-up rule that re-uses capacity already billed in the month, serves over 99\% of the historically delivered energy without a new peak, 97--99\% on held-out 2021 sessions, and 96--99.5\% when true demand exceeds the historical record by up to 23\%. The controllers keep a transformer rated at half the uncontrolled peak within its rating at 99\% service, and in a clear-sky PV scenario, PV-aware control cuts the import peak to a quarter. Whether peak reduction is delivered depends on the presence of a demand charge, not its level.
 \end{abstract}
 
 \begin{keyword}
@@ -80,16 +81,14 @@ The author declares no known competing financial interests or personal relations
 This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.
 
 \section*{Data availability}
-The session data analysed in this study are publicly available: ACN-Data \cite{Lee2019ACNData,ACNDataset}, in the extracts for May--December 2019 and May--August 2021 redistributed with SustainGym v0.1.7 under CC-BY-4.0 \cite{Yeh2023SustainGym}. Tariff values are those of SCE TOU-EV-4 as encoded in acnportal v0.3.3 \cite{SCETOUEV4}. The code, processed data and results generated in this study will be made available on request.
+The session data analysed in this study are publicly available: ACN-Data \cite{Lee2019ACNData,ACNDataset}, in the extracts for May--December 2019 and May--August 2021 redistributed with SustainGym v0.1.7 under CC-BY-4.0 \cite{Yeh2023SustainGym}. Tariff values are those of SCE TOU-EV-4 as encoded in acnportal v0.3.3 \cite{SCETOUEV4}. All code, the session extracts with checksums, every per-month result, the replayed load profiles and the sources of all tables and figures are openly available in a public GitHub repository \cite{ThisStudyRepo}, released under the MIT licence (the ACN-Data extracts in it remain under CC-BY-4.0):\\ {\small\url{https://github.com/drmansouralmuwallad-png/workplace-ev-flexibility}}.\\ The repository README lists the commands that reproduce every result in this paper.
 
 \section*{Declaration of generative AI and AI-assisted technologies in the manuscript preparation process}
 During the preparation of this work the author used Claude (Anthropic) to assist with code development, literature retrieval and drafting. After using this tool, the author reviewed and edited the content as needed and takes full responsibility for the content of the published article.
 
-\clearpage
-\appendix
-\setcounter{table}{0}\setcounter{figure}{0}
-\section{Session filtering}\label{app:flow}
-\input{tables/Table6_filter_flow}
+\section*{Supplementary material}
+Supplementary material (Tables S1--S7 and Figs.~S1--S5) is provided with this article.
+
 
 \bibliographystyle{elsarticle-num}
 \bibliography{references}

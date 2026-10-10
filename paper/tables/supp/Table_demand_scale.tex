@@ -1,0 +1,21 @@
+\begin{table}[H]
+\centering
+\caption{Sensitivity to higher driver demand. Each session's energy need is raised to $\alpha$ times its historically delivered energy, capped at what its estimated maximum rate can deliver while plugged in; declarations are unchanged. Means over August and November 2019 and over the held-out July and August 2021. $\Delta E$: resulting increase in total demand (\%). Served: energy served (\%) by nominal MPC (Nom.), MPC + top-up (Top.) and the hindsight optimum (Opt.); Full: vehicles fully served by MPC + top-up (\%); Peak red.\ and Saving: peak and bill reduction of MPC + top-up relative to uncontrolled charging (\%).}
+\label{tab:demandscale}
+\scriptsize
+\setlength{\tabcolsep}{1.5pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}llrrrrrrrrrrrrrr@{}}
+\hline
+ & & \multicolumn{7}{c}{2019 (Aug, Nov)} & \multicolumn{7}{c}{2021 held out (Jul, Aug)} \\
+Site & $\alpha$ & $\Delta E$ & Nom. & Top. & Full & Opt. & \makecell[r]{Peak\\red.} & Saving & $\Delta E$ & Nom. & Top. & Full & Opt. & \makecell[r]{Peak\\red.} & Saving \\
+\hline
+JPL & 1.00 & +0 & 96.1 & 99.8 & 98.6 & 100.0 & 56 & 37 & +0 & 91.0 & 98.6 & 96.3 & 100.0 & 42 & 24 \\
+ & 1.10 & +10 & 94.0 & 99.5 & 97.4 & 100.0 & 57 & 36 & +10 & 89.2 & 98.1 & 94.0 & 100.0 & 43 & 24 \\
+ & 1.25 & +23 & 90.9 & 98.9 & 94.9 & 100.0 & 56 & 33 & +23 & 86.7 & 97.2 & 91.0 & 100.0 & 44 & 24 \\
+\hline
+Caltech & 1.00 & +0 & 96.5 & 99.1 & 95.3 & 100.0 & 54 & 37 & +0 & 83.7 & 97.1 & 95.0 & 99.9 & 53 & 34 \\
+ & 1.10 & +9 & 94.5 & 98.6 & 93.4 & 100.0 & 60 & 41 & +8 & 82.7 & 96.6 & 94.1 & 99.9 & 53 & 34 \\
+ & 1.25 & +22 & 91.4 & 97.4 & 90.9 & 100.0 & 61 & 41 & +18 & 81.0 & 96.0 & 92.4 & 99.7 & 56 & 35 \\
+\hline
+\end{tabular*}
+\end{table}

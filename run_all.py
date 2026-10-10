@@ -84,3 +84,61 @@ if mode == "heldout":
             json.dump(summ, open(f"{R}/{site}_{m}_error_summary_heldout2021.json", "w"), indent=1)
             say("heldout", site, m, f"{time.time()-t:.0f}s")
     say("DONE heldout")
+
+if mode == "sens_topup":
+    # Robustness of the top-up rule (added before submission): the sensitivity scenarios plus a 25%
+    # lower site capacity, on two 2019 test months and on the two held-out 2021 months.
+    scen = {
+        "base":        lambda c: None,
+        "capacity_75": lambda c: c["physics"].__setitem__("site_capacity_kw", {k: 0.75 * v for k, v in c["physics"]["site_capacity_kw"].items()}),
+        "capacity_50": lambda c: c["physics"].__setitem__("site_capacity_kw", {k: 0.5 * v for k, v in c["physics"]["site_capacity_kw"].items()}),
+        "demand_x2":   lambda c: c["tariff"].__setitem__("frd_per_kw_month", 2 * 15.51),
+        "train_30d":   lambda c: c["model"].__setitem__("train_days", 30),
+        "train_90d":   lambda c: c["model"].__setitem__("train_days", 90),
+        "penalty_20":  lambda c: c["model"].__setitem__("shortfall_penalty_per_kwh", 20.0),
+    }
+    only = sys.argv[2:]
+    prev = f"{R}/topup_robustness.csv"
+    out = [pd.read_csv(prev)[lambda x: ~x.scenario.isin(only)]] if only and os.path.exists(prev) else []
+    for name, f in scen.items():
+        if only and name not in only:
+            continue
+        c = copy.deepcopy(cfg); f(c)
+        c["model"]["policies"] = ["uncontrolled", "mpc_nominal", "mpc_topup"]; c["model"]["topup_quantiles"] = [None]
+        for site in ["jpl", "caltech"]:
+            for pkl, months in [(f"data/processed/{site}_sessions.pkl", ["2019-08", "2019-11"]),
+                                (f"data/processed/{site}_sessions_2021.pkl", ["2021-07", "2021-08"])]:
+                df = pd.read_pickle(pkl)
+                for m in months:
+                    t = time.time()
+                    mt, _, _ = run_month(df, site, m, c, Tariff(c["tariff"]), verbose=False)
+                    mt.insert(0, "scenario", name); out.append(mt)
+                    pd.concat(out).to_csv(f"{R}/topup_robustness.csv", index=False)
+                    say("sens_topup", name, site, m, f"{time.time()-t:.0f}s")
+    say("DONE sens_topup")
+
+if mode == "demand_scale":
+    # Higher assumed demand (added before submission): every session's energy need is raised to
+    # alpha times its historically delivered energy, capped at what its estimated maximum rate can
+    # deliver while plugged in (rbar_kw x duration). Declarations are left unchanged, so the
+    # controllers face larger true needs than drivers declared. Training sessions are scaled the same way.
+    out = []
+    c = copy.deepcopy(cfg)
+    c["model"]["policies"] = ["uncontrolled", "mpc_nominal", "mpc_topup", "offline"]; c["model"]["topup_quantiles"] = [None]
+    for alpha in [1.0, 1.1, 1.25]:
+        for site in ["jpl", "caltech"]:
+            for pkl, months in [(f"data/processed/{site}_sessions.pkl", ["2019-08", "2019-11"]),
+                                (f"data/processed/{site}_sessions_2021.pkl", ["2021-07", "2021-08"])]:
+                df = pd.read_pickle(pkl).copy()
+                cap = df["rbar_kw"] * df["duration_h"]
+                df["kwh_hist"] = df["kwh"]
+                df["kwh"] = (alpha * df["kwh"]).clip(upper=cap).where(lambda s: s > df["kwh"], df["kwh"])
+                for m in months:
+                    t = time.time()
+                    mt, _, _ = run_month(df, site, m, c, Tariff(c["tariff"]), verbose=False)
+                    loc = df["arrival"].dt.tz_convert("America/Los_Angeles").dt.strftime("%Y-%m") == m
+                    mt.insert(0, "alpha", alpha)
+                    mt["kwh_hist_month"] = df.loc[loc, "kwh_hist"].sum(); mt["kwh_scaled_month"] = df.loc[loc, "kwh"].sum()
+                    out.append(mt); pd.concat(out).to_csv(f"{R}/demand_scale.csv", index=False)
+                    say("demand_scale", alpha, site, m, f"{time.time()-t:.0f}s")
+    say("DONE demand_scale")
